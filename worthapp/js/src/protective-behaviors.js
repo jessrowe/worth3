@@ -15,9 +15,7 @@
 
     var calculateRiskLevel = function($container) {
         var riskLevel = 0;
-        if ($container.find('.btn-danger').length > 1) {
-            riskLevel = 3;
-        } else if ($container.find('.btn-danger').length > 0) {
+        if ($container.find('.btn-danger').length > 0) {
             riskLevel = 2;
         } else if ($container.find('.btn-warning').length > 0) {
             riskLevel = 1;
@@ -36,17 +34,14 @@
             {
                 'title': 'A little Risky',
                 'class': 'warning',
-                'text': 'TODO'
+                'text': 'Some of the stuff you do is mildly risky.'
             },
             {
                 'title': 'Risky',
                 'class': 'danger',
-                'text': 'TODO'
-            },
-            {
-                'title': 'Very Risky',
-                'class': 'danger',
-                'text': 'TODO'
+                'text': 'Some of the stuff you do is high risk. It ' +
+                    'would be a good idea to think about some ways to keep ' +
+                    'yourself safer.'
             }
         ];
         $container.find('.risk-level').removeClass(
